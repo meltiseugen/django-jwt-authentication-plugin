@@ -46,5 +46,5 @@ urlpatterns = [
 
 ```python manage.py makemigrations && python manage.py migrate```
 
-5. You can now modify the authentication app in order to further customize it for your needs.
-Commit it along side your project and update it when new updates are available.
+5. Remove the .git folder of this repo so that the outer (main) repo will not complain about it
+and you are free o=to add more authentication logic to it and commit it to your base repo.
