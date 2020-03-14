@@ -1,12 +1,14 @@
 from django.urls import path, include
+
 from rest_framework import routers
+
+from rest_framework_simplejwt.views import TokenRefreshView
 
 from .views import (
     UserViewSet,
     CustomTokenObtainPairView
 )
 
-from rest_framework_simplejwt.views import TokenRefreshView
 
 router = routers.DefaultRouter()
 router.register('users', UserViewSet, 'auth-users')
