@@ -14,20 +14,30 @@ Available URL routes are:
 
 1. Clone the project along side your existing apps.
 
-```git clone https://github.com/meltiseugen/django-jwt-authentication-plugin.git```
+```git clone https://github.com/meltiseugen/django-jwt-authentication-plugin.git authplugin```
 
 2. Install the django-jwt-authentication-plugin requirements.
 
 ```pip install -r authentication/requirements.txt```
 
-3. Add the ```authentication``` app to ```INSTALLED_APPS``` of ```settings.py```
+3. Add the ```authplugin.authentication``` app to ```INSTALLED_APPS``` of ```settings.py```
+
+4. Add the new default authentication class to the rest framework.
+
+```
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+}
+```
 
 4. Add the URL routes to the main url.py of your project.
 
 ```
 urlpatterns = [
     ...
-    path('api/', include('authentication.urls')),
+    path('api/', include('authplugin.authentication.urls')),
     ...
 ]
 ```
