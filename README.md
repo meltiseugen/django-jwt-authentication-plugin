@@ -47,4 +47,4 @@ urlpatterns = [
 ```python manage.py makemigrations && python manage.py migrate```
 
 5. Remove the .git folder of this repo so that the outer (main) repo will not complain about it
-and you are free o=to add more authentication logic to it and commit it to your base repo.
+and you are free to add more authentication logic to it and commit it to your base repo.
